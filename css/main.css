@@ -47,11 +47,11 @@ html, body {
 #header {
 	position: relative;
 	height: 52px;
+	line-height: 52px;
 	margin: 0px;
 	padding: 0em 10px 0em 10px;
-	line-height: 52px;
 	border-bottom: 1px #a3a3a3 solid;
-
+	text-align: center;
 	background: #C3C3C3; /* old browsers */
 	background: -moz-linear-gradient(top, #FFFFFF 0%, #C3C3C3 100%); /* firefox */
 	background: -o-linear-gradient(top, #FFFFFF 0%, #C3C3C3 100%); /* Opera */
@@ -61,11 +61,20 @@ html, body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#C3C3C3', GradientType=0 ); /* ie */
 }
 #header_title {
+	float: left;
 	font-size: 2em;
 	color: #FFFFFF;
 	text-shadow: 1px 1px #333333;
 }
 
+#comment {
+	padding: 4px 10px 4px 10px;
+	font-weight: bold;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px #888888 solid;
+	opacity: 0.5;
+}
 #actions {
 	margin-right: 10px;
 	display: inline;
@@ -73,6 +82,29 @@ html, body {
 #actions .action-icon {
 	vertical-align:middle;
 	margin: 0;
+}
+
+#actions a.tooltip {
+	outline: none;
+	text-decoration:none;
+}
+#actions a.tooltip:hover {
+	text-decoration:none;
+} 
+#actions a.tooltip span {
+	display: none;
+	z-index: 10;
+	line-height: 1.5em;
+	padding: 2px 4px;
+	margin-top:54px;
+	margin-left:-60px;
+	background: #FEFBE7;
+	border: 1px #666666 solid;
+}
+#actions a.tooltip:hover span {
+	display:inline;
+	position:absolute;
+	color:#111;
 }
 
 #content {
@@ -91,7 +123,7 @@ html, body {
 	padding: 6px;
 	background: #FAF0D3;
 	box-shadow: 2px 3px 6px 1px #333333;
-	opacity: 0.7;
+	opacity: 0.8;
 	cursor: pointer;
 }
 #detail_info_text {
@@ -112,7 +144,6 @@ html, body {
 	display: block;
 	height: 12em;
 	width: 12em;
-	background: #FFFFFF;
 }
 #detail_info_number {
 }
@@ -175,6 +206,7 @@ html, body {
 	text-align: center;
 	background: #AA0000;
 	border: 1px #000000 dotted;
+	cursor: pointer;
 }
 #icon_view_list .light_text {
 	color: #F3F3F3;
@@ -183,6 +215,9 @@ html, body {
 	color: #333333;
 }
 
+#icon_view_show_desc {
+	padding-right: 16px;
+}
 #footer {
 	height: 2em;
 	line-height: 2em;
